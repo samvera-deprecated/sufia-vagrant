@@ -7,6 +7,16 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore Gemfile.lock
+/Gemfile.lock
+
+# Ignore hydra-jetty
+/jetty
+
+# Ignore Vagrant
+/.vagrant
+/.bashrc
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
