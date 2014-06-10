@@ -45,6 +45,11 @@ gem 'spring',        group: :development
 
 gem "devise"
 gem "devise-guests", "~> 0.3"
+
+group :development do
+  gem "pry-rails"
+end
+
 group :development, :test do
   gem "pry"
   gem "rspec-rails"
