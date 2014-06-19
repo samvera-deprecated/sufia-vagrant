@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'sufia', '~>4.0.0.rc1'
 
 # required to handle pagination properly in dashboard. See https://github.com/amatsuda/kaminari/pull/322
-gem 'kaminari', github: 'harai/kaminari', branch: 'route_prefix_prototype'  
+gem 'kaminari', github: 'harai/kaminari', branch: 'route_prefix_prototype'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -42,7 +42,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
 gem "devise"
 gem "devise-guests", "~> 0.3"
 
@@ -51,6 +50,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "unicorn-rails"
   gem "pry"
   gem "rspec-rails"
   gem "jettywrapper"
