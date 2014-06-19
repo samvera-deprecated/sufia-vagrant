@@ -15,7 +15,7 @@ git clone https://github.com/osulp/sufia-app
 cd sufia-app
 ```
 
-Set up Vagrant. 
+Set up Vagrant.
 
 ```bash
 vagrant up
@@ -23,10 +23,6 @@ vagrant ssh
 cd /vagrant
 ```
 
-```vagrant up``` should take some time the first time. You'll be downloading the vagrant box, installing a bunch of packages, then Fits, then installing all your Ruby dependencies, building your database, and starting Fedora and Solr. Most of the things in the [Sufia install instructions](https://github.com/projecthydra/sufia/blob/master/README.md) will be done, at this point; a few optional things are skipped. 
-
-Start up a resque worker: ```QUEUE=* rake environment resque:work```
-
-And your rails server: ```bundle exec rails s```
+```vagrant up``` should take some time the first time. You'll be downloading the vagrant box, installing a bunch of packages, then Fits, then installing all your Ruby dependencies, building your database, and starting Fedora and Solr. Most of the things in the [Sufia install instructions](https://github.com/projecthydra/sufia/blob/master/README.md) will be done, at this point; a few optional things are skipped.
 
 Browse to ```http://localhost:3000``` for your Sufia app.
