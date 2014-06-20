@@ -1,0 +1,8 @@
+characterize: 1
+batch_update: 2
+resolrize: 1
+audit: 3
+event: 5
+proxy_deposit: 2
+import_url: 2
+"*": 1
