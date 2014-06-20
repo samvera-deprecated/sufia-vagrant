@@ -1,48 +1,77 @@
-README
-=======
+# README
 
-This is a bare bones Sufia 4 demo application that is quick to set up.
+Sufia-app is a turnkey Hydra-based repository application that builds atop Sufia, providing [self-deposit functionality and more](https://github.com/projecthydra/sufia#what-is-sufia).
 
-Getting Started
-----------------
+## Getting Started
 
-There is an included Vagrantfile that installs dependencies and starts up your Sufia app. With Vagrant installed, you should just need to run ```vagrant up``` and ```vagrant ssh``` to get a system up. 
+There is an included Vagrantfile that installs dependencies and starts up your Sufia app. With VirtualBox and Vagrant installed, just run ```vagrant up``` to start kicking the tires of Hydra and Sufia.
 
-If you don't yet have Vagrant working, you should start by installing it. 
-  * Windows: follow the installation instructions on Vagrant's [downloads page](https://www.vagrantup.com/downloads).
-  * Mac: With homebrew ```brew tap phinze/cask; brew install brew-cask; brew cask install vagrant``` _or_ follow the installation instructions on Vagrant's [downloads page](https://www.vagrantup.com/downloads).
-  * Linux: use your favorite package manager to install packages for virtualbox and vagrant.
+### Install Git
+
+To grab a copy of sufia-app, which is hosted on github.com, you'll need git, the distributed version control system, installed.  Here are [instructions on installing git](http://git-scm.com/book/en/Getting-Started-Installing-Git).
+
+### Install VirtualBox
 
 If your find yourself with a "VirtualBox not found" error after running the ```vagrant up``` command, you will also need VirtualBox. Download packages and installation institutions can be found at https://www.virtualbox.org/wiki/Downloads.
-  
-Clone this repository into a convenient directory:
+
+### Install Vagrant
+
+If you don't have Vagrant installed, here's how to remedy that:
+
+  * Windows: follow the installation instructions on Vagrant's [downloads page](https://www.vagrantup.com/downloads).
+  * Mac: With homebrew ```brew tap phinze/cask; brew install brew-cask; brew cask install vagrant``` _or_ follow the installation instructions on Vagrant's [downloads page](https://www.vagrantup.com/downloads).
+  * Linux: use your favorite package manager to install packages for vagrant.
+
+### Run sufia-app
+
+Pull down a copy of sufia-app:
 
 ```bash
-git clone https://github.com/osulp/sufia-app
-cd sufia-app
+$ git clone https://github.com/osulp/sufia-app
+$ cd sufia-app
 ```
 
-Set up Vagrant.
+Fire up sufia-app:
 
 ```bash
 vagrant up
+```
+
+> ```vagrant up``` should take some time the first time -- **no, really, maybe grab a cup of coffee and wait for this to complete!** This step downloads the vagrant box, installs a bunch of system packages, downloads and installs FITS for file characterization, installs all the Ruby dependencies, builds a relational database, and starts Fedora Commons, Redis, and Solr.
+
+Finally, browse to ```http://localhost:3000``` and you should see the Sufia homepage, at which point you can sign up for an account and start uploading files.
+
+**That's it! Enjoy!**
+
+## Shutting down
+
+When you are done, you can shut down your vagrant box with:
+
+```bash
+vagrant halt
+```
+
+If you want to go through setting up your own environment (e.g., on a development server), see the commands in the Vagrantfile as guidance for setting up your own system.
+
+## Getting help
+
+There are numerous ways to get help.  You can reach the folks who work on Hydra and sufia-app here:
+
+ * [hydra-tech Google Group](http://groups.google.com/group/hydra-tech)
+ * [sufia-app GitHub repository](https://github.com/osulp/sufia-app/issues)
+ * [#projecthydra IRC channel](irc://irc.freenode.net/projecthydra)
+
+## Digging deeper
+
+You now have a sandbox to try out Hydra and Sufia, and a perfectly good development enviornment to boot.  Here's how to dig deeper. Start by connecting to the vagrant box and changing into the directory that contains all the sufia-app code:
+
+```bash
 vagrant ssh
 cd /vagrant
 ```
 
-```vagrant up``` should take some time (no really, maybe don't wait around) the first time. You'll be downloading the vagrant box, installing a bunch of packages, then Fits, then installing all your Ruby dependencies, building your database, and starting Fedora and Solr. Most of the things in the [Sufia install instructions](https://github.com/projecthydra/sufia/blob/master/README.md) will be done, at this point; a few optional things are skipped.
+Once you're connected to the vagrant box, just type `exit` to get out.
 
-Browse to ```http://localhost:3000``` for your Sufia app.
+## Contributing
 
-__That's it! Enjoy!__
-
-You now have a sandbox to try out Sufia, and a perfectly good development enviornment to boot.
-
-When you are done, you can shut down your virtual machine with:
-
-```bash
-exit
-vagrant halt
-```
-
-If you want to go through setting up your own environment, see the commands in the Vagrantfile as guidance for setting up your own system (note: some of packages installed by ```apt-get``` aren't neessary, there's some minor clean up to do there. Sorry).
+Interested in making sufia-app better? [See our instructions for contributing](CONTRIBUTING.md).
