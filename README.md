@@ -13,6 +13,8 @@ If you don't yet have Vagrant working, you should start by installing it.
   * Mac: With homebrew ```brew tap phinze/cask; brew install brew-cask; brew cask install vagrant``` _or_ follow the installation instructions on Vagrant's [downloads page](https://www.vagrantup.com/downloads).
   * Linux: use your favorite package manager to install packages for virtualbox and vagrant.
 
+If your find yourself with a "VirtualBox not found" error after running the ```vagrant up``` command, you will also need VirtualBox. Download packages and installation institutions can be found at https://www.virtualbox.org/wiki/Downloads.
+  
 Clone this repository into a convenient directory:
 
 ```bash
