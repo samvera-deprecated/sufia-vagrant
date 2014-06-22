@@ -27,7 +27,7 @@ If you don't have Vagrant installed, here's how to remedy that:
 Pull down a copy of sufia-app:
 
 ```bash
-$ git clone https://github.com/osulp/sufia-app
+$ git clone https://github.com/projecthydra-labs/sufia-vagrant
 $ cd sufia-app
 ```
 
@@ -40,6 +40,12 @@ vagrant up
 > ```vagrant up``` should take some time the first time -- **no, really, maybe grab a cup of coffee and wait for this to complete!** This step downloads the vagrant box, installs a bunch of system packages, downloads and installs FITS for file characterization, installs all the Ruby dependencies, builds a relational database, and starts Fedora Commons, Redis, and Solr.
 
 Finally, browse to ```http://localhost:3000``` and you should see the Sufia homepage, at which point you can sign up for an account and start uploading files.
+
+Note: It may take a few moments for the included Solr instance to come online.  If you see:
+
+    Connection refused - Unable to connect to Solr instance
+
+Wait a few moments and reload the page.
 
 **That's it! Enjoy!**
 
